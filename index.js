@@ -79,10 +79,10 @@ app.get("/deals",async (req,res)=>{
 });
 
 app.post("/newShop", async (req,res)=>{
-	avShop.createShop(req.body.newShopName);
+	await avShop.createShop(req.body.newShopName);
 
-	console.log(req.body.newShopName);
-	res.render('newShop',{})
+	
+	res.redirect('/allShops')
 
 });
 
