@@ -4,7 +4,7 @@ let AvoShopper = require("../avo-shopper");
 const Pool = pg.Pool;
 require('dotenv').config()
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://avos:avos123@localhost:5432/avo_shopper';
+const connectionString = process.env.DATABASE_URL || 'postgresql://codex-coder:pg123@localhost:5432/avodb_test';
 
 const pool = new Pool({
     connectionString
@@ -59,6 +59,8 @@ describe('The avo shopper', function () {
     it('should return all the deals for a given shop', async function () {
 
         const avoShopper = AvoShopper(pool);
+
+        
         
         // assert.deepStrictEqual([], taxiTrips.findTripsByRegNumber('...'));
         // assert.deepStrictEqual([], taxiTrips.findTripsByRegNumber('***'));

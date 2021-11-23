@@ -15,6 +15,7 @@ module.exports = function(pool) {
 
 	async function dealsForShop(shopId) {
 		const result = await pool.query(`select * from avo_deal where shop_id = $1`, [shopId]);
+		console.log(result.rows);
 		return result.rows;
 	}
 

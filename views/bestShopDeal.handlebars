@@ -1,0 +1,38 @@
+<h4>The Shop with the best deals</h4>
+
+
+<form action="/bestShopDeal" method="post">
+<div class="contanier">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+
+            <select name="sell">
+                <option value=""> Select A shop </option>
+                {{#each shops}}
+
+                <option name="id" value="{{this.id}}"> {{this.id}} {{this.name}} </option>
+
+                {{/each}}
+            </select>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+<input type="submit" value="View shop">
+
+<div class="contanier">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            
+
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+</form>
