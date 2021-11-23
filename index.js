@@ -63,8 +63,8 @@ app.post("/bestShopDeal",async (req,res)=>{
 });
 
 app.post("/add",async (req,res)=>{
-	req.body
-	console.log(req.body.inName)
+	
+	
 	res.redirect('/add');
 });
 

@@ -3,37 +3,42 @@
 
 <form action="/add" method="get">
 
-<div class="container-fluid">
-        <row>
-                <div class="col-4">
+        <div class="container-fluid">
+                <div class="row">
+                        <div class="col-3">
 
+                        </div>
+
+                        <div class="col-6">
+                                <div class="btn-group">
+                                        <input type="Text" min="1" value="" class="form-control" name="inName" >
+                                        <input type="number" min="1" value="" class="form-control" name="qty">
+                                        <input type="submit" value="add Shop" class="btn btn-primary ">
+                                        
+                                </div>
+                        </div>
+                        <div class="col-3">
+                                
+                        </div>
                 </div>
+        </div>
 
-                <div class="col-4">
-                        <input type="text" value="" name="inName" placeholder="Enter the desired QTY">
+
+        {{!-- <div class="container-fluid">
+                <div class="row">
+                        <div class="col-4">
+
+
+                        </div>
+
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-4">
+
+                        </div>
                 </div>
-                <div class="col-4">
-
-                </div>
-        </row>
-</div>
-
-
-<div class="container-fluid">
-        <row>
-                <div class="col-4">
-                        
-
-                </div>
-
-                <div class="col-4">
-                        <input type="submit" value="add Shop" class="btn btn-primary ">
-                </div>
-                <div class="col-4">
-
-                </div>
-        </row>
-</div>
+        </div> --}}
 
 
 </form>

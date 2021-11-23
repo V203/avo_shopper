@@ -24,9 +24,17 @@
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
+            <table class="table table-borderless table-light">
+                <tr>
+                    <th>AVOCADO SHOPS</th>
+                </tr>
+                
             {{#each  shops }}
-            <li> <strong>{{name}}</strong>  </li>
+            <tr>
+            <td> {{name}}</td>
+            </tr>
             {{/each}}
+            </table>
         </div>
         <div class="col-4"></div>
     </div>
