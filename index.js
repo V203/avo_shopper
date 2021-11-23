@@ -49,28 +49,32 @@ app.get("/allShops", async (req,res)=>{
 
 app.get("/bestShopDeal",async (req,res)=>{
 	let shops = await avShop.listShops()
-	res.render('bestShopDeal',{shops});
+	let shopDeals = await avShop.dealsForShop(req.body.sell);
+	// console.log({shopDeals})	
+	res.render('bestShopDeal',{shops,shopDeals});
 
 });
 
 app.post("/bestShopDeal",async (req,res)=>{
-	console.log(req.body.sell)
+	console.log(req.body);
+	let shops = await avShop.listShops()
+	let shopDeals = await avShop.dealsForShop(req.body.sell);
+		
 
-	let shopDeals = await avShop.dealsForShop(Number(req.body.sell));
-	console.log({shopDeals})	
-
-	res.render('bestShopDeal')
+	res.render('bestShopDeal',{shopDeals,shops})
 });
 
-app.post("/add",async (req,res)=>{
+app.post("/deals",async (req,res)=>{
 	
+	await avShop.createDeal(req.body.dealName,req.body.qty,req.body.price);
 	
-	res.redirect('/add');
+	res.redirect('/deals');
 });
 
-app.get("/add",async (req,res)=>{
+app.get("/deals",async (req,res)=>{
+	let shops = await avShop.listShops()
 
-	res.render('add',{});
+	res.render('deals',{shops});
 
 });
 

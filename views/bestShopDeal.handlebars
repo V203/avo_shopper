@@ -2,37 +2,52 @@
 
 
 <form action="/bestShopDeal" method="post">
-<div class="contanier">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
+    <div class="contanier">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
 
-            <select name="sell">
-                <option value=""> Select A shop </option>
-                {{#each shops}}
+                <select name="sell">
+                    <option value=""> Select A shop </option>
+                    {{#each shops}}
 
-                <option name="id" value="{{this.id}}"> {{this.id}} {{this.name}} </option>
+                    <option name="id" value="{{this.id}}"> {{this.id}} {{this.name}} </option>
 
-                {{/each}}
-            </select>
+                    {{/each}}
+                </select>
 
+            </div>
+            <div class="col-4"></div>
         </div>
-        <div class="col-4"></div>
     </div>
-</div>
 
-<input type="submit" value="View shop">
+    <input type="submit" value="View shop">
 
-<div class="contanier">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
-            
+    <div class="contanier">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <table>
+                    <tr>
+                        <th>QTY</th>
+                        <th>FOR</th>
+                        <th>PRICE</th>
+                    </tr>
+
+                    {{#each shopDeals}}
+                    <tr>
+                        <td>{{this.qty}}</td>
+                        <td>for Only</td>
+                        <td>{{this.price}}</td>
+                    </tr>
+                    {{/each}}
+
+                </table>
 
 
+            </div>
+            <div class="col-4"></div>
         </div>
-        <div class="col-4"></div>
     </div>
-</div>
 
 </form>
