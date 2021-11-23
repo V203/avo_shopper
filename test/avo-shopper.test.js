@@ -7,7 +7,7 @@ require('dotenv').config()
 const connectionString = process.env.DATABASE_URL || 'postgresql://codex-coder:pg123@localhost:5432/avodb_test';
 
 const pool = new Pool({
-    connectionString
+    connectionString,ssl:{rejectUnauthorized:false}
 });
 
 describe('The avo shopper', function () {

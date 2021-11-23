@@ -6,7 +6,7 @@ const Pool = pg.Pool;
 const connectionString = process.env.DATABASE_URL  || 'postgresql://codex-coder:pg123@localhost:5432/avodb'
 
 const pool = new Pool({
-    connectionString,rejectUnauthorized:false
+    connectionString,ssl:{rejectUnauthorized:false}
 });
 
 const app = express();
